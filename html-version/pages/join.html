@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join AI & Machine Learning Club at Oriental College of Technology, Bhopal">
+    <title>Join Us - AI & ML Club OCT</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/enhanced-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.png" alt="AI ML Club Logo">
+                <span>AI & ML Club</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="join.html" class="nav-link active">Join Us</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Join Hero -->
+    <section class="page-hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="page-hero-content" data-aos="fade-up">
+                <h1 class="page-title">Join Our Club</h1>
+                <p class="page-subtitle">Start Your AI & ML Journey Today</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Benefits -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Become a Member?</h2>
+            <div class="benefits-showcase">
+                <div class="benefit-card glass-card" data-aos="fade-right">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Learn from Experts</h3>
+                    <p>Access to workshops, seminars, and mentorship from industry professionals and experienced faculty</p>
+                </div>
+                <div class="benefit-card glass-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Build Real Projects</h3>
+                    <p>Work on cutting-edge AI/ML projects and build an impressive portfolio</p>
+                </div>
+                <div class="benefit-card glass-card" data-aos="fade-right" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network & Collaborate</h3>
+                    <p>Connect with 500+ members, alumni, and industry partners</p>
+                </div>
+                <div class="benefit-card glass-card" data-aos="fade-right" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Career Opportunities</h3>
+                    <p>Access to internships, job referrals, and placement support</p>
+                </div>
+                <div class="benefit-card glass-card" data-aos="fade-right" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certifications</h3>
+                    <p>Earn certificates for workshops, competitions, and projects</p>
+                </div>
+                <div class="benefit-card glass-card" data-aos="fade-right" data-aos-delay="500">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Compete & Win</h3>
+                    <p>Participate in hackathons and competitions with prize money</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Form -->
+    <section class="join-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header" data-aos="fade-up">
+                    <h2>Membership Application</h2>
+                    <p>Fill in your details to become a member. All fields marked with * are required.</p>
+                </div>
+
+                <form id="join-form" class="membership-form glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullname">Full Name *</label>
+                                <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required pattern="[6-9][0-9]{9}" placeholder="10-digit mobile number">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender *</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-graduation-cap"></i> Academic Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="enrollment">Enrollment Number *</label>
+                                <input type="text" id="enrollment" name="enrollment" required placeholder="Your enrollment number">
+                            </div>
+                            <div class="form-group">
+                                <label for="department">Department *</label>
+                                <select id="department" name="department" required>
+                                    <option value="">Select Department</option>
+                                    <option value="cse">Computer Science & Engineering</option>
+                                    <option value="ai-ds">AI & Data Science</option>
+                                    <option value="it">Information Technology</option>
+                                    <option value="ece">Electronics & Communication</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="year">Current Year *</label>
+                                <select id="year" name="year" required>
+                                    <option value="">Select Year</option>
+                                    <option value="1">First Year</option>
+                                    <option value="2">Second Year</option>
+                                    <option value="3">Third Year</option>
+                                    <option value="4">Fourth Year</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="semester">Current Semester *</label>
+                                <select id="semester" name="semester" required>
+                                    <option value="">Select Semester</option>
+                                    <option value="1">1st Semester</option>
+                                    <option value="2">2nd Semester</option>
+                                    <option value="3">3rd Semester</option>
+                                    <option value="4">4th Semester</option>
+                                    <option value="5">5th Semester</option>
+                                    <option value="6">6th Semester</option>
+                                    <option value="7">7th Semester</option>
+                                    <option value="8">8th Semester</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interests & Experience -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-brain"></i> Interests & Experience</h3>
+                        <div class="form-group">
+                            <label>Areas of Interest * (Select all that apply)</label>
+                            <div class="checkbox-grid">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="machine-learning">
+                                    <span>Machine Learning</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="deep-learning">
+                                    <span>Deep Learning</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="nlp">
+                                    <span>Natural Language Processing</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="computer-vision">
+                                    <span>Computer Vision</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="data-science">
+                                    <span>Data Science</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="interests" value="reinforcement-learning">
+                                    <span>Reinforcement Learning</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Experience Level *</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">Select Experience Level</option>
+                                <option value="beginner">Beginner (No prior experience)</option>
+                                <option value="intermediate">Intermediate (Some projects/courses)</option>
+                                <option value="advanced">Advanced (Multiple projects/experience)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="skills">Programming Skills (Comma separated)</label>
+                            <input type="text" id="skills" name="skills" placeholder="e.g., Python, TensorFlow, PyTorch, Scikit-learn">
+                        </div>
+                    </div>
+
+                    <!-- Preferred Team -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-users-cog"></i> Team Preference</h3>
+                        <div class="form-group">
+                            <label for="team">Preferred Team *</label>
+                            <select id="team" name="team" required>
+                                <option value="">Select Preferred Team</option>
+                                <option value="technical">Technical Team (Development & Research)</option>
+                                <option value="event">Event Management Team</option>
+                                <option value="media">Media & Content Team</option>
+                                <option value="anchor">Anchor & PR Team</option>
+                                <option value="any">Open to Any Team</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="why-join">Why do you want to join? *</label>
+                            <textarea id="why-join" name="why-join" rows="4" required minlength="50" placeholder="Tell us why you want to join the AI & ML Club (minimum 50 characters)"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Social Links (Optional) -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-link"></i> Social Links (Optional)</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn Profile</label>
+                                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                            </div>
+                            <div class="form-group">
+                                <label for="github">GitHub Profile</label>
+                                <input type="url" id="github" name="github" placeholder="https://github.com/yourusername">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms & Conditions -->
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label class="checkbox-label terms-checkbox">
+                                <input type="checkbox" name="terms" required>
+                                <span>I agree to the club's terms and conditions and commit to active participation *</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Submit Application</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item glass-card" data-aos="fade-up">
+                    <h3><i class="fas fa-question-circle"></i> Who can join?</h3>
+                    <p>Any student enrolled at Oriental College of Technology can join, regardless of department or year.</p>
+                </div>
+                <div class="faq-item glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-question-circle"></i> Is there a membership fee?</h3>
+                    <p>No, membership is completely free. However, some specialized workshops may have nominal charges for materials.</p>
+                </div>
+                <div class="faq-item glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-question-circle"></i> Do I need prior AI/ML knowledge?</h3>
+                    <p>No! We welcome beginners. We provide foundational workshops and mentorship for students at all levels.</p>
+                </div>
+                <div class="faq-item glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-question-circle"></i> What is the time commitment?</h3>
+                    <p>It's flexible! Attend events that interest you. Active members typically spend 4-6 hours per week.</p>
+                </div>
+                <div class="faq-item glass-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3><i class="fas fa-question-circle"></i> Can I join multiple teams?</h3>
+                    <p>Yes! While you'll have a primary team, you can contribute to other teams based on your interests.</p>
+                </div>
+                <div class="faq-item glass-card" data-aos="fade-up" data-aos-delay="500">
+                    <h3><i class="fas fa-question-circle"></i> When will I hear back?</h3>
+                    <p>You'll receive a confirmation email within 2-3 working days after submitting your application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info glass-card" data-aos="fade-right">
+                    <h2>Have Questions?</h2>
+                    <p>Feel free to reach out to us through any of these channels:</p>
+                    <div class="contact-methods">
+                        <a href="mailto:aimlcluboct@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>aimlcluboct@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/919876543210" class="contact-method">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/aimlcluboct" class="contact-method">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <h4>Instagram</h4>
+                                <p>@aimlcluboct</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="office-info glass-card" data-aos="fade-left">
+                    <h2>Visit Us</h2>
+                    <div class="office-details">
+                        <div class="office-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>AI & ML Club Office<br>Oriental College of Technology<br>Bhopal, Madhya Pradesh</p>
+                            </div>
+                        </div>
+                        <div class="office-detail">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Office Hours</h4>
+                                <p>Monday - Friday<br>10:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AI & ML Club</h3>
+                    <p>Oriental College of Technology, Bhopal</p>
+                    <p class="tagline">Innovate • Implement • Inspire</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" rel="noopener noreferrer">Home</a></li>
+                        <li><a href="about.html" rel="noopener noreferrer">About</a></li>
+                        <li><a href="team.html" rel="noopener noreferrer">Team</a></li>
+                        <li><a href="events.html" rel="noopener noreferrer">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/aimlcluboct" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/company/aimlcluboct" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com/aimlcluboct" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:aimlcluboct@gmail.com" rel="noopener noreferrer" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI & ML Club - Oriental College of Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/enhanced-security.js"></script>
+</body>
+</html>

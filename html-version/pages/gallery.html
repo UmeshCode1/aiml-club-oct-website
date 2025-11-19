@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo gallery - AI & Machine Learning Club at Oriental College of Technology, Bhopal">
+    <title>Gallery - AI & ML Club OCT</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/enhanced-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.png" alt="AI ML Club Logo">
+                <span>AI & ML Club</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="join.html" class="nav-link">Join Us</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="page-hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="page-hero-content" data-aos="fade-up">
+                <h1 class="page-title">Our Gallery</h1>
+                <p class="page-subtitle">Capturing Moments of Innovation & Learning</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="content-section">
+        <div class="container">
+            <div class="gallery-controls" data-aos="fade-up">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i> All
+                    </button>
+                    <button class="filter-btn" data-filter="workshops">
+                        <i class="fas fa-laptop-code"></i> Workshops
+                    </button>
+                    <button class="filter-btn" data-filter="hackathons">
+                        <i class="fas fa-code"></i> Hackathons
+                    </button>
+                    <button class="filter-btn" data-filter="seminars">
+                        <i class="fas fa-chalkboard-teacher"></i> Seminars
+                    </button>
+                    <button class="filter-btn" data-filter="team">
+                        <i class="fas fa-users"></i> Team
+                    </button>
+                    <button class="filter-btn" data-filter="projects">
+                        <i class="fas fa-project-diagram"></i> Projects
+                    </button>
+                </div>
+                <div class="gallery-actions">
+                    <a href="https://drive.google.com/drive/folders/1mGYEZ3sPGB8W2yPIXoh3WNEpTThfJ0Xn" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fab fa-google-drive"></i> View on Drive
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1-_byssQsFS1pw02iDxyt40_n2CdCBaOk?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fas fa-folder"></i> Media Records
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div id="gallery-grid" class="gallery-grid">
+                <!-- Gallery will be loaded dynamically via gallery.js -->
+                <div class="gallery-loading">
+                    <div class="spinner"></div>
+                    <p>Loading photos from Google Drive...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Gallery Highlights</h2>
+            <div class="stats-grid">
+                <div class="stat-card glass-card" data-aos="zoom-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="500">0</h3>
+                    <p class="stat-label">Total Photos</p>
+                </div>
+                <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="50">0</h3>
+                    <p class="stat-label">Event Videos</p>
+                </div>
+                <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="50">0</h3>
+                    <p class="stat-label">Events Covered</p>
+                </div>
+                <div class="stat-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="stat-number" data-target="10">0</h3>
+                    <p class="stat-label">Photographers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Albums -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Recent Albums</h2>
+            <div class="albums-grid">
+                <div class="album-card glass-card" data-aos="fade-up">
+                    <div class="album-cover">
+                        <img src="../images/team-photo.jpg" alt="ML Bootcamp 2024">
+                        <div class="album-overlay">
+                            <a href="#" class="view-album-btn">
+                                <i class="fas fa-eye"></i> View Album
+                            </a>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>ML Bootcamp 2024</h3>
+                        <p>November 2024 • 45 photos</p>
+                    </div>
+                </div>
+
+                <div class="album-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="album-cover">
+                        <img src="../images/team-photo.jpg" alt="AI Hackathon">
+                        <div class="album-overlay">
+                            <a href="#" class="view-album-btn">
+                                <i class="fas fa-eye"></i> View Album
+                            </a>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>AI Hackathon</h3>
+                        <p>October 2024 • 67 photos</p>
+                    </div>
+                </div>
+
+                <div class="album-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="album-cover">
+                        <img src="../images/team-photo.jpg" alt="Kaggle Workshop">
+                        <div class="album-overlay">
+                            <a href="#" class="view-album-btn">
+                                <i class="fas fa-eye"></i> View Album
+                            </a>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Kaggle Workshop</h3>
+                        <p>October 2024 • 32 photos</p>
+                    </div>
+                </div>
+
+                <div class="album-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="album-cover">
+                        <img src="../images/team-photo.jpg" alt="Team Meetup">
+                        <div class="album-overlay">
+                            <a href="#" class="view-album-btn">
+                                <i class="fas fa-eye"></i> View Album
+                            </a>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Team Meetup</h3>
+                        <p>September 2024 • 28 photos</p>
+                    </div>
+                </div>
+
+                <div class="album-card glass-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="album-cover">
+                        <img src="../images/team-photo.jpg" alt="CV Hackathon">
+                        <div class="album-overlay">
+                            <a href="#" class="view-album-btn">
+                                <i class="fas fa-eye"></i> View Album
+                            </a>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>CV Hackathon</h3>
+                        <p>August 2024 • 54 photos</p>
+                    </div>
+                </div>
+
+                <div class="album-card glass-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="album-cover">
+                        <img src="../images/team-photo.jpg" alt="NLP Workshop">
+                        <div class="album-overlay">
+                            <a href="#" class="view-album-btn">
+                                <i class="fas fa-eye"></i> View Album
+                            </a>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>NLP Workshop Series</h3>
+                        <p>July 2024 • 41 photos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card glass-card" data-aos="zoom-in">
+                <h2>Be Part of Our Journey!</h2>
+                <p>Join us and create memories that last a lifetime</p>
+                <a href="join.html" class="btn btn-primary">
+                    <span>Join Now</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <a class="lightbox-prev">&#10094;</a>
+        <a class="lightbox-next">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AI & ML Club</h3>
+                    <p>Oriental College of Technology, Bhopal</p>
+                    <p class="tagline">Innovate • Implement • Inspire</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" rel="noopener noreferrer">Home</a></li>
+                        <li><a href="about.html" rel="noopener noreferrer">About</a></li>
+                        <li><a href="team.html" rel="noopener noreferrer">Team</a></li>
+                        <li><a href="events.html" rel="noopener noreferrer">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/aimlcluboct" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/company/aimlcluboct" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com/aimlcluboct" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:aimlcluboct@gmail.com" rel="noopener noreferrer" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI & ML Club - Oriental College of Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/enhanced-security.js"></script>
+</body>
+</html>
