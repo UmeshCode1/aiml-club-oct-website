@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="0; url=./html-version/index.html">
+    <title>Redirecting to AI & ML Club OCT</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: #0a0e27;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .loader {
+            text-align: center;
+        }
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #00f5ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        h1 {
+            color: #00f5ff;
+            margin: 20px 0;
+        }
+        p {
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+        <h1>AI & ML Club OCT</h1>
+        <p>Redirecting to website...</p>
+        <p style="font-size: 14px; margin-top: 20px;">Innovate • Implement • Inspire</p>
+    </div>
+    
+    <script>
+        // Fallback redirect if meta refresh fails
+        setTimeout(() => {
+            window.location.href = './html-version/index.html';
+        }, 1000);
+    </script>
+</body>
+</html>

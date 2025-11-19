@@ -1,0 +1,708 @@
+/* =====================================================
+   ENHANCED UI IMPROVEMENTS
+   Premium Modern Design with Security Integration
+   ===================================================== */
+
+/* Enhanced Variables */
+:root {
+    --glass-strong: rgba(255, 255, 255, 0.08);
+    --glass-subtle: rgba(255, 255, 255, 0.03);
+    --shadow-glow-cyan: 0 0 40px rgba(0, 245, 255, 0.4);
+    --shadow-glow-purple: 0 0 40px rgba(102, 126, 234, 0.4);
+    --shadow-glow-pink: 0 0 40px rgba(240, 147, 251, 0.4);
+}
+
+/* =====================================================
+   Enhanced Glassmorphism Cards
+   ===================================================== */
+
+.glass-card {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 
+        var(--shadow-md),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px !important;
+    padding: 2.5rem !important;
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--primary-color), 
+        var(--secondary-color),
+        transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: var(--glass-strong);
+    box-shadow: 
+        var(--shadow-lg),
+        var(--shadow-glow-cyan),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 245, 255, 0.4) !important;
+}
+
+/* =====================================================
+   Enhanced Buttons with Ripple Effect
+   ===================================================== */
+
+.btn, .btn-primary {
+    position: relative;
+    overflow: hidden;
+    padding: 1.2rem 2.5rem !important;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 245, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn::before, .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: 0;
+}
+
+.btn:hover::before, .btn-primary:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.btn:hover, .btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 8px 30px rgba(0, 245, 255, 0.6),
+        0 0 40px rgba(0, 245, 255, 0.4);
+}
+
+.btn:active, .btn-primary:active {
+    transform: translateY(-1px) scale(1.02);
+    transition: all 0.1s ease;
+}
+
+/* =====================================================
+   Enhanced Section Backgrounds
+   ===================================================== */
+
+section {
+    position: relative;
+    padding: 8rem 2rem !important;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: 
+        radial-gradient(circle at top right, rgba(0, 245, 255, 0.08), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(102, 126, 234, 0.08), transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* =====================================================
+   Animated Gradient Headings
+   ===================================================== */
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 4rem !important;
+    font-size: 3.5rem !important;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientFlow 4s ease infinite;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.6);
+}
+
+@keyframes gradientFlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* =====================================================
+   Enhanced Team Cards with 3D Effect
+   ===================================================== */
+
+.team-card {
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-md);
+    border-radius: 24px !important;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.team-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 245, 255, 0.15), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+.team-card:hover {
+    transform: translateY(-15px) rotateY(5deg) !important;
+    box-shadow: 
+        var(--shadow-lg),
+        var(--shadow-glow-cyan) !important;
+    border-color: rgba(0, 245, 255, 0.5) !important;
+}
+
+.team-card:hover::after {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+.member-image {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card:hover .member-image {
+    transform: scale(1.15) rotate(3deg);
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);
+}
+
+/* =====================================================
+   Enhanced Event Timeline
+   ===================================================== */
+
+.timeline-item {
+    padding-left: 4rem !important;
+    margin-bottom: 4rem !important;
+    transition: all 0.4s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(15px);
+}
+
+.timeline-dot {
+    transition: all 0.4s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.8);
+    box-shadow: 
+        0 0 30px rgba(0, 245, 255, 0.8),
+        0 0 60px rgba(0, 245, 255, 0.4);
+}
+
+.timeline-content {
+    transition: all 0.4s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    background: var(--glass-strong) !important;
+    border-color: rgba(0, 245, 255, 0.5) !important;
+    box-shadow: var(--shadow-glow-cyan);
+}
+
+/* =====================================================
+   Enhanced Form Inputs with Floating Labels
+   ===================================================== */
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 1.3rem 1.5rem !important;
+    background: var(--glass-bg) !important;
+    border: 2px solid var(--glass-border) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(148, 163, 184, 0.5);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    transform: translateX(10px);
+    opacity: 0.3;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary-color) !important;
+    background: var(--glass-strong) !important;
+    box-shadow: 
+        0 0 30px rgba(0, 245, 255, 0.4),
+        inset 0 2px 8px rgba(0, 0, 0, 0.3),
+        0 0 0 4px rgba(0, 245, 255, 0.1) !important;
+    transform: translateY(-3px);
+}
+
+/* Input validation states */
+.form-group input.valid,
+.form-group textarea.valid {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #ff4757;
+    box-shadow: 0 0 20px rgba(255, 71, 87, 0.3);
+}
+
+/* =====================================================
+   Enhanced Gallery Filters
+   ===================================================== */
+
+.filter-btn {
+    padding: 0.9rem 2rem !important;
+    background: var(--glass-bg) !important;
+    border: 2px solid var(--glass-border) !important;
+    border-radius: 50px !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.filter-btn:hover::before,
+.filter-btn.active::before {
+    width: 250%;
+    height: 250%;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 245, 255, 0.5);
+    border-color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* =====================================================
+   Enhanced Gallery Items with Zoom Effect
+   ===================================================== */
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(102, 126, 234, 0.2));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        var(--shadow-lg),
+        var(--shadow-glow-cyan);
+}
+
+.gallery-item img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.15) rotate(2deg);
+}
+
+/* =====================================================
+   Enhanced Footer Links
+   ===================================================== */
+
+.footer-links a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.6);
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* =====================================================
+   Enhanced Social Icons with 3D Rotation
+   ===================================================== */
+
+.social-links a {
+    width: 60px !important;
+    height: 60px !important;
+    border: 2px solid var(--glass-border) !important;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.social-links a:hover::before {
+    opacity: 1;
+}
+
+.social-links a:hover {
+    transform: translateY(-8px) rotate(360deg) scale(1.2);
+    box-shadow: 
+        var(--shadow-lg),
+        var(--shadow-glow-cyan);
+    border-color: var(--primary-color) !important;
+}
+
+.social-links a:active {
+    transform: translateY(-4px) scale(1.1);
+}
+
+/* =====================================================
+   Enhanced Statistics Counter Animation
+   ===================================================== */
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(0, 245, 255, 0.1),
+        transparent 30%
+    );
+    animation: rotate 4s linear infinite;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}
+
+.stat-number {
+    font-size: 3rem !important;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+}
+
+/* =====================================================
+   Enhanced Loading States
+   ===================================================== */
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--glass-border);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* =====================================================
+   Enhanced Scroll Indicators
+   ===================================================== */
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 50px;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    opacity: 0.8;
+    animation: scrollBounce 2s infinite;
+}
+
+.scroll-indicator::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    animation: scrollDown 2s infinite;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+@keyframes scrollBounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+}
+
+@keyframes scrollDown {
+    0% { top: 10px; opacity: 1; }
+    100% { top: 30px; opacity: 0; }
+}
+
+/* =====================================================
+   Enhanced Tooltips
+   ===================================================== */
+
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    padding: 8px 12px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+[data-tooltip]:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* =====================================================
+   Enhanced Scrollbar
+   ===================================================== */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-darker);
+    border-left: 1px solid var(--glass-border);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--secondary-color), var(--accent-color));
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.8);
+}
+
+/* =====================================================
+   Responsive Enhancements
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem !important;
+    }
+    
+    section {
+        padding: 5rem 1.5rem !important;
+    }
+    
+    .btn, .btn-primary {
+        padding: 1rem 2rem !important;
+    }
+    
+    .social-links a {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+/* =====================================================
+   Accessibility Enhancements
+   ===================================================== */
+
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: var(--bg-darker);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    z-index: 10000;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Focus states for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* =====================================================
+   Print Styles
+   ===================================================== */
+
+@media print {
+    .navbar,
+    .scroll-indicator,
+    .social-links {
+        display: none !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
+    }
+}
