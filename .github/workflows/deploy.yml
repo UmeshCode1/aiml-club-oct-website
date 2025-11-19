@@ -30,7 +30,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './html-version'
+          # Deploy entire repository (includes root index.html redirect)
+          path: '.'
           
       - name: Deploy to GitHub Pages
         id: deployment

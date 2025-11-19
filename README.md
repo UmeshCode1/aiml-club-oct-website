@@ -22,6 +22,9 @@ A modern, responsive, and visually stunning website for the AI & Machine Learnin
 
 ## 🚀 Quick Start
 
+### 🌐 Live Website
+**Visit**: https://umeshcode1.github.io/aiml-club-oct-website/
+
 ### HTML/CSS/JS Version (Recommended for Quick Deploy)
 
 1. Navigate to the `html-version` folder
